@@ -1,9 +1,11 @@
+package DS
+
 import java.util.LinkedList
 
 class LinkedList {
     var list = LinkedList<Int>()
     fun allOperations() {
-        println("-----------------LinkedList Starts-----------------")
+        println("-----------------DS.LinkedList Starts-----------------")
 
         // insert like a stack
         list.add(1)
@@ -112,6 +114,6 @@ class LinkedList {
         println("List is empty :: ${list.isEmpty()}")
 
 
-        println("-----------------LinkedList Ends-----------------")
+        println("-----------------DS.LinkedList Ends-----------------")
     }
 }
