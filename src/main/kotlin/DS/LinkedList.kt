@@ -23,9 +23,7 @@ class LinkedList {
         // add the item to index 51234
         list.add(0, 5)
 
-        // remove the first index 1234
-        println("List Before removal ::" + list)
-        list.pop()
+
 
         //Note
         //The remove() and poll() methods differ only in their behavior when the queue is empty:
@@ -33,6 +31,11 @@ class LinkedList {
         // while the poll() method returns null.
         // The element() and peek() methods return, but do not remove, the head of the queue.
 
+        // remove the first index 1234
+        println("List Before removal ::" + list)
+
+
+        println("list.pop() :: " +  list.pop())
         println(" list.poll() :: " + list.poll())
         //println(" list.pollFirst() :: "+ list.pollFirst())
         //println(" list.pollLast() :: "+ list.pollLast())
