@@ -4,14 +4,22 @@ import java.util.LinkedList
 
 class LinkedList {
     var list = LinkedList<Int>()
+    var listTwo = LinkedList<Int>()
     fun allOperations() {
         println("-----------------DS.LinkedList Starts-----------------")
 
+        listTwo.add(-1)
+        listTwo.add(-2)
+        listTwo.add(-3)
         // insert like a stack
         list.add(1)
         list.add(2)
         list.add(3)
         list.add(4)
+        println("List before push "+list)
+        list.push(10)
+        println("List after push "+list)
+
         // add the item to index 51234
         list.add(0, 5)
 
@@ -101,9 +109,12 @@ class LinkedList {
         // whereas add() will throw an IllegalStateException
         // Note Ended
 
+        //union added uncommon item at end of list
+        println("Union :: " + list.union(listTwo))
 
         //remove duplicate
         list.add(0)
+
         println("List before duplicate by :: $list")
         println("Remove duplicate by set :: " + list.toSet())
         println("List is empty :: ${list.isEmpty()}")
