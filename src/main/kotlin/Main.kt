@@ -1,4 +1,5 @@
 import DS.LinkedList
+import DS.Queue
 import DS.Stack
 
 fun main(){
@@ -7,4 +8,7 @@ fun main(){
 
     val stackList=Stack()
     stackList.allOperations()
+
+    val queue=Queue()
+    queue.allOperations()
 }
