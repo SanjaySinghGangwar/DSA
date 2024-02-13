@@ -2,9 +2,9 @@ package Algorithms.Others
 
 fun selectionSort(arr: IntArray) {
     val n = arr.size
-    for (i in 0 until n - 1) {
+    for (i in 0..<n - 1) {
         var minIndex = i
-        for (j in i + 1 until n) {
+        for (j in i + 1..<n) {
             if (arr[j] < arr[minIndex]) {
                 minIndex = j
             }

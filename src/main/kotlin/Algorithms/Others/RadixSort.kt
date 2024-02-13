@@ -17,13 +17,13 @@ fun countingSort(arr: IntArray, exp: Int) {
     val count = IntArray(10)
 
     // Store count of occurrences in count[]
-    for (i in 0 until n) {
+    for (i in 0..<n) {
         val index = arr[i] / exp % 10
         count[index]++
     }
 
     // Change count[i] so that count[i] now contains actual position of this digit in output[]
-    for (i in 1 until 10) {
+    for (i in 1..<10) {
         count[i] += count[i - 1]
     }
 
@@ -35,7 +35,7 @@ fun countingSort(arr: IntArray, exp: Int) {
     }
 
     // Copy the output array to arr[] so that arr[] now contains sorted numbers according to current digit
-    for (i in 0 until n) {
+    for (i in 0..<n) {
         arr[i] = output[i]
     }
 }

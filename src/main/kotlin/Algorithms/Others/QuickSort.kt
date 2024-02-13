@@ -11,7 +11,7 @@ fun quickSort(array: IntArray, low: Int, high: Int) {
 fun partition(array: IntArray, low: Int, high: Int): Int {
     val pivot = array[high]
     var i = low - 1
-    for (j in low until high) {
+    for (j in low..<high) {
         if (array[j] <= pivot) {
             i++
             swap(array, i, j)
