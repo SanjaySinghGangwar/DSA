@@ -1,14 +1,28 @@
-import DS.LinkedList
-import DS.Queue
-import DS.Stack
+import DS.ArrayListl
 
-fun main(){
-    val linkedList = LinkedList()
-    linkedList.allOperations()
+fun main() {
+//    val linkedList = LinkedList()
+//    linkedList.allOperations()
+//
+//    val stackList=Stack()
+//    stackList.allOperations()
+//
+//    val queue=Queue()
+//    queue.allOperations()
 
-    val stackList=Stack()
-    stackList.allOperations()
+    val arrayLos = ArrayListl()
+//    arrayLos.main()
 
-    val queue=Queue()
-    queue.allOperations()
+//   val data =arrayLos.twoSum(nums= intArrayOf(3,2,3), target = 6)
+//    println("SANJAY :: "+data.asList())
+
+    println("SANJAY :: "+removeElement(intArrayOf(3,2,2,3),3))
+}
+
+
+fun removeElement(nums: IntArray, `val`: Int): Int {
+    val newArray = nums.filter { it != `val` }.toIntArray()
+    println("NEW ARRAY :: " + newArray.asList())
+    val size = newArray.size - 1
+    return size
 }
