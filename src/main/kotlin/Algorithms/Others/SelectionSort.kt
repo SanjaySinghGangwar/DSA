@@ -1,20 +1,20 @@
 package Algorithms.Others
 
+import Algorithms.Helper.Helper.swap
+
 fun selectionSort(arr: IntArray) {
-    val n = arr.size //size of array
-    for (i in 0..<n - 1) { // first loop rill size || 0 to n-1
-        var minIndex = i //update min index
-        for (j in i + 1..<n) { //second loop will go || i+1 to n
-            if (arr[j] < arr[minIndex]) {
-                minIndex = j // update index of min
+    for (i in arr.indices) {
+        var min = i
+        for (j in i + 1..<arr.size) {
+            if (arr[j] < arr[min]) {
+                min = j
             }
         }
-        // Swap arr[i] and arr[minIndex]
-        val temp = arr[i]
-        arr[i] = arr[minIndex]
-        arr[minIndex] = temp
+        //swap items
+        swap(arr,i,min)
     }
 }
+
 
 
 fun main() {

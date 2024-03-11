@@ -1,5 +1,7 @@
 package Algorithms.Others
 
+import Algorithms.Helper.Helper.swap
+
 fun quickSort(array: IntArray, low: Int, high: Int) {
     if (low < high) {
         val pivotIndex = partition(array, low, high)
@@ -19,12 +21,6 @@ fun partition(array: IntArray, low: Int, high: Int): Int {
     }
     swap(array, i + 1, high)
     return i + 1
-}
-
-fun swap(array: IntArray, i: Int, j: Int) {
-    val temp = array[i]
-    array[i] = array[j]
-    array[j] = temp
 }
 
 fun main() {

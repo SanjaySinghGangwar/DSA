@@ -1,23 +1,9 @@
 package Algorithms.Others
 
-import kotlin.math.pow
-import kotlin.math.roundToInt
-
-fun bubbleSort(arr: IntArray) {
-    val n = arr.size
-    for (i in 0..<n - 1) { // first loop will go by n-1
-        for (j in 0..<n - i - 1) { // second loop will go by n-i-1
-            if (arr[j] > arr[j + 1]) { // if(array[j] > array[j+1])
-                val temp = arr[j] // swap two variables
-                arr[j] = arr[j + 1]
-                arr[j + 1] = temp
-            }
-        }
-    }
-}
+import Algorithms.Helper.Helper.swap
 
 fun main() {
-    val arr = intArrayOf(64, 34, 25, 999,12, 22, 11, 90)
+    val arr = intArrayOf(1001,64, 34, 25, 999, 12, 22, 11, 90,1000)
     println("Array before sorting:")
     println(arr.joinToString(", "))
 
@@ -25,6 +11,16 @@ fun main() {
 
     println("Array after sorting:")
     println(arr.joinToString(", "))
+}
+
+fun bubbleSort(arr: IntArray) {
+    for(i in arr.indices){
+        for(j in 0..<arr.size-1-i){
+            if(arr[j]>arr[j+1]){
+                swap(arr,j,j+1)
+            }
+        }
+    }
 }
 
 
