@@ -1,12 +1,12 @@
 package Algorithms.Others
 
 fun selectionSort(arr: IntArray) {
-    val n = arr.size
-    for (i in 0..<n - 1) {
-        var minIndex = i
-        for (j in i + 1..<n) {
+    val n = arr.size //size of array
+    for (i in 0..<n - 1) { // first loop rill size || 0 to n-1
+        var minIndex = i //update min index
+        for (j in i + 1..<n) { //second loop will go || i+1 to n
             if (arr[j] < arr[minIndex]) {
-                minIndex = j
+                minIndex = j // update index of min
             }
         }
         // Swap arr[i] and arr[minIndex]

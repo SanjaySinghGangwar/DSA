@@ -1,8 +1,8 @@
 package Algorithms.Others
 
 fun insertionSort(array: IntArray) {
-    val n = array.size
-    for (i in 1..<n) {
+    val n = array.size // size of array
+    for (i in 1..<n) { // loops start with 1 to n
         val key = array[i]
         var j = i - 1
         while (j >= 0 && array[j] > key) {
