@@ -2,14 +2,6 @@ package Algorithms.Others
 
 import Algorithms.Helper.Helper.swap
 
-fun quickSort(array: IntArray, low: Int, high: Int) {
-    if (low < high) {
-        val pivotIndex = partition(array, low, high)
-        quickSort(array, low, pivotIndex - 1)
-        quickSort(array, pivotIndex + 1, high)
-    }
-}
-
 fun partition(array: IntArray, low: Int, high: Int): Int {
     val pivot = array[high]
     var i = low - 1
@@ -32,4 +24,12 @@ fun main() {
 
     println("Array after sorting:")
     println(arr.joinToString(", "))
+}
+
+fun quickSort(arr: IntArray, low: Int, high: Int) {
+    if (low < high) {
+        val pivot = partition(arr, low, high)
+        quickSort(arr, low, pivot - 1)
+        quickSort(arr, pivot + 1, high)
+    }
 }

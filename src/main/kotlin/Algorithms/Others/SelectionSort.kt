@@ -18,7 +18,8 @@ fun selectionSort(arr: IntArray) {
 
 
 fun main() {
-    val arr = intArrayOf(64, 25, 12, 22, 11)
+    val arr = intArrayOf(1212,64, 25, 12, 22, 11,1243213)
+
     println("Array before sorting:")
     println(arr.joinToString(", "))
 
