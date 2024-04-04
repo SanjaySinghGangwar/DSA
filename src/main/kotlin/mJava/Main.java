@@ -8,6 +8,7 @@ public class Main {
         linkedList.insert(3);
         linkedList.insert(7);
         linkedList.insert(12);
+        linkedList.insert(12);
 
         linkedList.insertAtBeginning(0);
         linkedList.insertAtEnd(6);
@@ -16,7 +17,7 @@ public class Main {
 
         linkedList.printList();
         linkedList.reverse();
-        linkedList.delete(6);
+        linkedList.delete(mLinkedList.currentHead,2);
         System.out.println("---------------------------");
         linkedList.printList();
 

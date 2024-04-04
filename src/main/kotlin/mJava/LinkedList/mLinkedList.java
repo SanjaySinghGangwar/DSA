@@ -2,7 +2,7 @@ package mJava.LinkedList;
 
 public class mLinkedList {
 
-    Node currentHead;
+    public static Node currentHead;
 
     public mLinkedList() {
         this.currentHead = null;
@@ -97,8 +97,8 @@ public class mLinkedList {
         currentHead = prev;
     }
 
-    public void delete(int key) {
-        Node current = currentHead;
+    public void delete(Node list ,int key) {
+        Node current = list;
         Node prev = null;
 
         while (current != null && current.data != key) {
@@ -111,10 +111,9 @@ public class mLinkedList {
             return;
         }
 
-        if (prev == null) {
-            currentHead = current.next;
-        } else {
+        if (prev != null) {
             prev.next = current.next;
+            delete(list,key);
         }
     }
 }
